@@ -340,8 +340,8 @@
     /*  Clients Slider2
     /*----------------------------------------------------*/
     function client_slider(){
-        if ( $('.clients_slider').length ){
-            $('.clients_slider').owlCarousel({
+        if ( $('.brand_slider').length ){
+            $('.brand_slider').owlCarousel({
                 loop:true,
                 margin: 15,
                 items: 6,

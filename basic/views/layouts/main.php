@@ -30,9 +30,9 @@ LtAppAsset::register($this);
     <div class="header_top_area">
         <div class="container">
             <div class="pull-left">
-                <a href="#"><i class="fa fa-phone"></i>(012) - 3456789</a>
-                <a href="#"><i class="fa fa-map-marker"></i>1234 Cafficic, California</a>
-                <a href="#"><i class="mdi mdi-clock"></i>08 AM - 10 PM</a>
+                <p><i class="fa fa-phone"></i>+7 (347) 246-55-99 </p>
+                <p><i class="fa fa-map-marker"></i>г. Уфа, ул. Комсомольская, д. 24</p>
+                <p><i class="mdi mdi-clock"></i>08 AM - 10 PM</p>
             </div>
             <div class="pull-right">
                 <ul class="header_social">
@@ -61,27 +61,17 @@ LtAppAsset::register($this);
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown submenu active">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Home</a>
-                            <ul class="dropdown-menu">
-                                <li><a href="index.html">Home 01</a></li>
-                                <li><a href="index-2.html">Home 02</a></li>
-                            </ul>
+                        <li class="dropdown submenu">
+                            <a href="/">Главная</a>
                         </li>
                         <li class="dropdown submenu">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects</a>
+                            <a href="/category/">Товары</a>
                             <ul class="dropdown-menu">
-                                <li><a href="project-full-width.html">Project Full Width</a></li>
-                                <li><a href="project-grid-three-column.html">Project Grid 01</a></li>
-                                <li><a href="project-grid-two-column.html">Project Grid 02</a></li>
-                                <li><a href="project-three-column.html">Project Grid 03</a></li>
-                                <li><a href="project-single.html">Single Project</a></li>
+                                <?= \app\components\CategoryWidget::widget(['tpl' => 'menu'])?>
                             </ul>
                         </li>
-                        <li><a href="service-single.html">Services</a></li>
-                        <li><a href="#">about us</a></li>
-                        <li><a href="blog-details.html">blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="/about/">О компании</a></li>
+                        <li><a href="/contact/">Контакты</a></li>
                         <li class="icon_search"><a href="#"><i class="mdi mdi-cart"></i></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->

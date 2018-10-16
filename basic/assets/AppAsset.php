@@ -17,7 +17,6 @@ class AppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/site.css',
         'css/font-awesome.min.css',
         'css/materialdesignicons.min.css',
         'css/bootstrap.min.css',
@@ -28,6 +27,7 @@ class AppAsset extends AssetBundle {
         'vendors/owl-carousel/assets/owl.carousel.min.css',
         'css/style.css',
         'css/responsive.css',
+        'css/site.css',
     ];
     public $js = [
         "js/jquery-2.2.4.js",

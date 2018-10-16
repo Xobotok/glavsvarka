@@ -118,7 +118,7 @@
                 nav:true,
                 autoplay: false, 
                 smartSpeed: 1500,
-                dots: false,
+                dots: true,
                 navContainer: ".our_latest_slider",
                 navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
                 responsiveClass: true,
@@ -150,7 +150,7 @@
                 nav:true,
                 autoplay: false, 
                 smartSpeed: 1500,
-                dots: false,
+                dots: true,
                 navContainer: ".our_latest_slider",
                 navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
                 responsiveClass: true,
@@ -180,9 +180,9 @@
                 margin: 30,
                 items: 3,
                 nav:true,
-                autoplay: false, 
-                smartSpeed: 1500,
-                dots: false,
+                autoplay: true,
+                smartSpeed: 800,
+                dots: true,
                 navContainer: ".our_latest_slider",
                 navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
                 responsiveClass: true,
@@ -211,7 +211,7 @@
                 loop:true,
                 margin: 30,
                 items: 4,
-                nav:false,
+                nav:true,
                 autoplay: false,
                 smartSpeed: 1500,
                 dots: false,
@@ -340,8 +340,8 @@
     /*  Clients Slider2
     /*----------------------------------------------------*/
     function client_slider(){
-        if ( $('.clients_slider').length ){
-            $('.clients_slider').owlCarousel({
+        if ( $('.brand_slider').length ){
+            $('.brand_slider').owlCarousel({
                 loop:true,
                 margin: 15,
                 items: 6,

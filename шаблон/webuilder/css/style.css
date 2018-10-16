@@ -2412,12 +2412,12 @@ iframe {
 ============================================================================================ */
 /* Clients area css
 ============================================================================================ */
-.clients_area {
+.brands_area {
   background: #f5f5f5;
   padding: 90px 0px;
 }
 
-.clients_slider .item {
+.brand_slider .item {
   text-align: center;
   border: 1px solid transparent;
   display: block;
@@ -2428,14 +2428,14 @@ iframe {
   cursor: pointer;
 }
 
-.clients_slider .item img {
+.brand_slider .item img {
   width: auto;
   max-width: 100%;
   display: inline-block;
   line-height: 90px;
 }
 
-.clients_slider .item:hover {
+.brand_slider .item:hover {
   border-color: #ffcd00;
 }
 

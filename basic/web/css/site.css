@@ -113,3 +113,16 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+.category_menu:hover > .subcategory_menu {
+    display: block;
+}
+.main_text1 {
+    color: white;
+    font-size: 38px;
+}
+.main_text2 {
+    color: #ffcd00;
+    font-size: 68px;
+    font-weight: bold;
+}
