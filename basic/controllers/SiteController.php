@@ -2,11 +2,12 @@
 
 namespace app\controllers;
 
+use app\models\Product;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
-use app\models\LoginForm;
+use app\models\forms\SearchForm;
 use app\models\ContactForm;
 
 class SiteController extends Controller
@@ -74,7 +75,7 @@ class SiteController extends Controller
             return $this->goHome();
         }
 
-        $model = new LoginForm();
+        $model = new SearchForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
             return $this->goBack();
         }
@@ -121,5 +122,8 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+    public function actionSearch() {
+    $model = new SearchForm();
     }
 }

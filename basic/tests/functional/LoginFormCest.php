@@ -39,8 +39,8 @@ class LoginFormCest
     public function loginWithWrongCredentials(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', [
-            'LoginForm[username]' => 'admin',
-            'LoginForm[password]' => 'wrong',
+            'SearchForm[username]' => 'admin',
+            'SearchForm[password]' => 'wrong',
         ]);
         $I->expectTo('see validations errors');
         $I->see('Incorrect username or password.');
@@ -49,8 +49,8 @@ class LoginFormCest
     public function loginSuccessfully(\FunctionalTester $I)
     {
         $I->submitForm('#login-form', [
-            'LoginForm[username]' => 'admin',
-            'LoginForm[password]' => 'admin',
+            'SearchForm[username]' => 'admin',
+            'SearchForm[password]' => 'admin',
         ]);
         $I->see('Logout (admin)');
         $I->dontSeeElement('form#login-form');              

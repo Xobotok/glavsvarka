@@ -42,9 +42,10 @@ $config = [
 
         'urlManager' => [
             'enablePrettyUrl' => true,
-            'showScriptName' => true,
+            'showScriptName' => false,
             'rules' => [
                 'defaultRoute' => 'main/index',
+                'category/<id:\d+>' => 'category/view'
             ],
         ],
 

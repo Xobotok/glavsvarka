@@ -6,7 +6,7 @@
  * Time: 20:21
  */
 
-namespace app\components;
+namespace app\components\widgets;
 
 use app\models\Product;
 use yii\base\Widget;
@@ -45,7 +45,7 @@ class SpecialOffersWidget extends Widget {
     }
     protected function offerToTemplate($offer) {
         ob_start();
-        include __DIR__.'/special_offers_tpl/' . $this->tpl;
+        include __DIR__ . '/special_offers_tpl/' . $this->tpl;
         return ob_get_clean();
     }
 }

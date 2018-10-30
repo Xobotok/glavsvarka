@@ -17,17 +17,17 @@ class AppAsset extends AssetBundle {
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-        'css/font-awesome.min.css',
-        'css/materialdesignicons.min.css',
-        'css/bootstrap.min.css',
+        '/css/font-awesome.min.css',
+        '/css/materialdesignicons.min.css',
+        '/css/bootstrap.min.css',
         'vendors/revolution/css/settings.css',
         'vendors/revolution/css/layers.css',
         'vendors/revolution/css/navigation.css',
         'vendors/animate-css/animate.css',
         'vendors/owl-carousel/assets/owl.carousel.min.css',
-        'css/style.css',
-        'css/responsive.css',
-        'css/site.css',
+        '/css/style.css',
+        '/css/responsive.css',
+        '/css/site.css',
     ];
     public $js = [
         "js/jquery-2.2.4.js",

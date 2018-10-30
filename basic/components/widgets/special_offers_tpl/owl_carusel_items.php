@@ -12,7 +12,7 @@
         <div class="member_name">
             <div class="special_offer_name"><p class="special_offer_name_text"><?= $offer['name']?></p></div>
             <a href="/product/<?=$offer['id']?>"><h4>узнать подробнее</h4></a>
-            <button class ='add_to_cart get_btn'>Добавить в корзину</button>
+            <div class="add_to_cart_box"><button class ='add_to_cart get_btn'>Добавить в корзину</button></div>
         </div>
     </div>
 </div>

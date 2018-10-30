@@ -6,10 +6,12 @@
  * Time: 20:21
  */
 
-namespace app\components;
+namespace app\components\widgets;
 
+use Yii;
 use yii\base\Widget;
 use app\models\Category;
+use yii\helpers\VarDumper;
 
 class CategoryWidget extends Widget {
 
@@ -52,7 +54,7 @@ class CategoryWidget extends Widget {
     }
     protected function catToTemplate($category) {
         ob_start();
-        include __DIR__.'/category_tpl/' . $this->tpl;
+        include __DIR__ . '/category_tpl/' . $this->tpl;
         return ob_get_clean();
     }
 }

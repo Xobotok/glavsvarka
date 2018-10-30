@@ -7,6 +7,7 @@ use app\assets\LtAppAsset;
 use yii\helpers\Html;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
+use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
@@ -27,26 +28,22 @@ LtAppAsset::register($this);
 <?php $this->beginBody() ?>
 <!--================Header Area =================-->
 <header class="main_header_area">
-    <div class="header_top_area">
-        <div class="container">
-            <div class="pull-left">
-                <p><i class="fa fa-phone"></i>+7 (347) 246-55-99 </p>
-                <p><i class="fa fa-map-marker"></i>г. Уфа, ул. Комсомольская, д. 24</p>
-                <p><i class="mdi mdi-clock"></i>08 AM - 10 PM</p>
-            </div>
-            <div class="pull-right">
-                <ul class="header_social">
-                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
     <div class="main_menu_area">
         <div class="container">
+            <div class="container">
+                <div class="pull-left">
+                    <a class="navbar-brand" href="/"><img src="/img/logo.png" alt=""></a>
+                </div>
+                <div class="pull-right">
+                    <p><i class="fa fa-phone"></i>+7 (347) 246-55-99 </p>
+                    <p><i class="fa fa-map-marker"></i>г. Уфа, ул. Комсомольская, д. 24</p>
+                    <p><i class="mdi mdi-clock"></i>08 AM - 10 PM</p>
+                </div>
+            </div>
             <nav class="navbar navbar-default">
+                <div class="search" id = 'form_search'>
+
+                </div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -55,7 +52,7 @@ LtAppAsset::register($this);
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="#"><img src="img/logo.png" alt=""></a>
+
                 </div>
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -65,9 +62,9 @@ LtAppAsset::register($this);
                             <a href="/">Главная</a>
                         </li>
                         <li class="dropdown submenu">
-                            <a href="/category/">Товары</a>
+                            <a href="<?=Yii::$app->urlManager->createUrl(['category/all'])?>">Товары</a>
                             <ul class="dropdown-menu">
-                                <?= \app\components\CategoryWidget::widget(['tpl' => 'menu'])?>
+                                <?= \app\components\widgets\CategoryWidget::widget(['tpl' => 'menu'])?>
                             </ul>
                         </li>
                         <li><a href="/about/">О компании</a></li>

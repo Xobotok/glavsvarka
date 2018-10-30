@@ -3918,7 +3918,7 @@ iframe {
 
 /*# sourceMappingURL=style.css.map */
 
-.pull-left p {
+.pull-right p {
   color: white;
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -3931,7 +3931,7 @@ iframe {
   margin-top: 10px;
   border-right: 1px solid grey;
 }
-.pull-left i {
+.pull-right i {
   padding-right: 10px;
 }
 .main_header_area.navbar_fixed .main_menu_area .navbar.navbar-default .nav.navbar-nav.navbar-right li a:hover {
@@ -4063,13 +4063,15 @@ transform: rotate(45deg);
   background-color: white;
   border: 1px solid white;
   text-decoration: none;
+  font-size: 14px;
   outline: none;
   color: #333;
   text-transform: uppercase;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 1px;
   font-weight: bold;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -4077,15 +4079,18 @@ transform: rotate(45deg);
   -o-transition: 0.5s all;
   transition: 0.5s all;
 }
+.add_to_cart_box {
+  text-align: center;
+}
 .add_to_cart:hover {
   background-color: #fff;
   color: white;
 }
 .add_to_cart:active {
-  padding-top: 9px;
-  padding-bottom: 9px;
+  padding-top: 1px;
+  padding-bottom: 3px;
   margin-top: 1px;
-  margin-bottom: 1px;
+  margin-bottom: 0px;
   color: #efefef;
   -webkit-transition: 0.1s all;
   -moz-transition: 0.1s all;

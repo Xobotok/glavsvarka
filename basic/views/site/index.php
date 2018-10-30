@@ -2,6 +2,8 @@
 
 /* @var $this yii\web\View */
 
+use app\components\CommentaryWidget;
+
 $this->title = 'Главсварка';
 
 ?>
@@ -59,7 +61,7 @@ $this->title = 'Главсварка';
             <h6>Самые выгодные покупки</h6>
         </div>
         <div class="team_slider owl-carousel">
-                <?=\app\components\SpecialOffersWidget::widget()?>
+                <?=\app\components\widgets\SpecialOffersWidget::widget()?>
         </div>
         <div class = 'special_offer_all'><a class="get_bg_btn" href="/sale/">Посмотреть все</a></div>
     </div>
@@ -69,7 +71,7 @@ $this->title = 'Главсварка';
 <section class="our_service_area" id = "category">
     <div class="left_service">
         <div class="left_service_inner">
-            <?= \app\components\CategoryWidget::widget(['tpl' => 'block'])?>
+            <?= \app\components\widgets\CategoryWidget::widget(['tpl' => 'block'])?>
             </div>
         <div class="category_all_box">
         <a class="get_bg_btn" href="/category/">Посмотреть все</a>
@@ -136,89 +138,19 @@ $this->title = 'Главсварка';
     </div>
 </section>
 <!--================End Work Area =================-->
-<!--================Who We Are Area =================-->
-<section class="who_we_are_area">
-    <div class="container">
-        <div class="row who_we_inner">
-            <div class="col-md-5">
-                <div class="who_we_left_content">
-                    <div class="main_w_title">
-                        <h2>Who <br class="title_br" /> We Are?</h2>
-                        <h6>All About US</h6>
-                    </div>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                    <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur?</p>
-                    <div class="border_bar"></div>
-                </div>
-            </div>
-            <div class="col-md-7">
-                <div class="who_we_image">
-                    <img src="/img/who-we.jpg" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Who We Are Area =================-->
-<!--================Counter Area =================-->
-<section class="counter_area">
-    <div class="container">
-        <div class="row counter_inner">
-            <div class="col-md-3 col-sm-6">
-                <div class="counter_item">
-                    <i class="fa fa-archive" aria-hidden="true"></i>
-                    <h4 class="counter">245</h4>
-                    <h5>total projects</h5>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="counter_item">
-                    <i class="fa fa-building-o" aria-hidden="true"></i>
-                    <h4 class="counter">535</h4>
-                    <h5>houses build</h5>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="counter_item">
-                    <i class="fa fa-users" aria-hidden="true"></i>
-                    <h4 class="counter">288</h4>
-                    <h5>experiences staff</h5>
-                </div>
-            </div>
-            <div class="col-md-3 col-sm-6">
-                <div class="counter_item">
-                    <i class="fa fa-smile-o" aria-hidden="true"></i>
-                    <h4 class="counter">750</h4>
-                    <h5>happy clients</h5>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!--================End Counter Area =================-->
-
 <!--================Testimonials Area =================-->
 <section class="testimonials_area">
     <div class="container">
         <div class="row testimonials_inner">
             <div class="col-md-4">
                 <div class="main_w_title">
-                    <h2>Client <br class="title_br" />Says</h2>
-                    <h6>Golden Word</h6>
+                    <h2>Отзывы <br class="title_br" />Клиентов</h2>
+                    <h6>О Главсварке</h6>
                 </div>
             </div>
             <div class="col-md-8">
                 <div class="testimonials_slider owl-carousel">
-                    <div class="item">
-                        <div class="testi_left">
-                            <i class="fa fa-quote-right" aria-hidden="true"></i>
-                            <p>On the other hand, we denounce with righteous indignation and dislike men who are so beguiled and demoralized by the charms of pleasure of the moment.</p>
-                            <a href="#"><h4>Eng. Abul Kalam</h4></a>
-                        </div>
-                        <div class="testi_right">
-                            <img src="/img/testimonials/test-1.jpg" alt="">
-                        </div>
-                    </div>
+                    <?= \app\components\widgets\CommentaryWidget::widget()?>
                     <div class="item">
                         <div class="testi_left">
                             <i class="fa fa-quote-right" aria-hidden="true"></i>
@@ -334,8 +266,8 @@ $this->title = 'Главсварка';
                         <img src="/img/icon/place-icon.png" alt="">
                     </div>
                     <div class="media-body">
-                        <h4>Office Address :</h4>
-                        <h5>1234 Cafficic, California, USA</h5>
+                        <h4>Адрес магазина :</h4>
+                        <h5>г. Уфа, ул. Комсомольская, д. 24</h5>
                     </div>
                 </div>
             </div>
@@ -345,8 +277,9 @@ $this->title = 'Главсварка';
                         <img src="/img/icon/phone-icon.png" alt="">
                     </div>
                     <div class="media-body">
-                        <h5>(012) 3456789</h5>
-                        <h5>(012) 3456789</h5>
+                        <h5>+7 (347) 246-55-99</h5>
+                        <h5>+7 (917) 456-59-15</h5>
+                        <h5>+7 (987) 492-22-41</h5>
                     </div>
                 </div>
             </div>
@@ -356,8 +289,7 @@ $this->title = 'Главсварка';
                         <img src="/img/icon/inbox-icon.png" alt="">
                     </div>
                     <div class="media-body">
-                        <h5>info@domain.com</h5>
-                        <h5>info@domain.com</h5>
+                        <h5>glavsvarka@mail.ru</h5>
                     </div>
                 </div>
             </div>
