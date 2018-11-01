@@ -63,7 +63,7 @@ $this->title = 'Главсварка';
         <div class="team_slider owl-carousel">
                 <?=\app\components\widgets\SpecialOffersWidget::widget()?>
         </div>
-        <div class = 'special_offer_all'><a class="get_bg_btn" href="/sale/">Посмотреть все</a></div>
+        <div class = 'special_offer_all'><a class="get_bg_btn" href="<?=Yii::$app->urlManager->createUrl(['sale/all'])?>">Посмотреть все</a></div>
     </div>
 </section>
 <!--================End Our Team Area =================-->
@@ -74,7 +74,7 @@ $this->title = 'Главсварка';
             <?= \app\components\widgets\CategoryWidget::widget(['tpl' => 'block'])?>
             </div>
         <div class="category_all_box">
-        <a class="get_bg_btn" href="/category/">Посмотреть все</a>
+        <a class="get_bg_btn" href="<?=Yii::$app->urlManager->createUrl(['/category/all'])?>">Посмотреть все</a>
         </div>
         </div>
 
@@ -182,76 +182,11 @@ $this->title = 'Главсварка';
 <section class="latest_news_area">
     <div class="container">
         <div class="main_c_b_title">
-            <h2>latest <br class="title_br" />news</h2>
-            <h6>Construction World</h6>
+            <h2>Последние <br class="title_br" />новости</h2>
+            <h6>Из мира сварки</h6>
         </div>
         <div class="row latest_news_inner">
-            <div class="col-md-4 col-sm-6">
-                <div class="latest_news_item">
-                    <div class="news_image">
-                        <img src="/img/blog/l-news/l-news-1.jpg" alt="">
-                        <div class="l_date">
-                            <h5>14</h5>
-                            <h6>Aug</h6>
-                        </div>
-                    </div>
-                    <div class="news_content">
-                        <a href="#"><h4>The Road To Success Is Always Under Construction</h4></a>
-                        <h6>Posted By <a href="#">Admin</a></h6>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <div class="pull-left">
-                            <a href="#">2 Comments</a>
-                        </div>
-                        <div class="pull-right">
-                            <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="latest_news_item">
-                    <div class="news_image">
-                        <img src="/img/blog/l-news/l-news-2.jpg" alt="">
-                        <div class="l_date">
-                            <h5>14</h5>
-                            <h6>Aug</h6>
-                        </div>
-                    </div>
-                    <div class="news_content">
-                        <a href="#"><h4>The Road To Success Is Always Under Construction</h4></a>
-                        <h6>Posted By <a href="#">Admin</a></h6>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <div class="pull-left">
-                            <a href="#">2 Comments</a>
-                        </div>
-                        <div class="pull-right">
-                            <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-6">
-                <div class="latest_news_item">
-                    <div class="news_image">
-                        <img src="/img/blog/l-news/l-news-3.jpg" alt="">
-                        <div class="l_date">
-                            <h5>14</h5>
-                            <h6>Aug</h6>
-                        </div>
-                    </div>
-                    <div class="news_content">
-                        <a href="#"><h4>The Road To Success Is Always Under Construction</h4></a>
-                        <h6>Posted By <a href="#">Admin</a></h6>
-                        <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                        <div class="pull-left">
-                            <a href="#">2 Comments</a>
-                        </div>
-                        <div class="pull-right">
-                            <a href="#">Read More <i class="fa fa-angle-right" aria-hidden="true"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        <?=\app\components\widgets\NewsWidget::widget()?>
         </div>
     </div>
 </section>

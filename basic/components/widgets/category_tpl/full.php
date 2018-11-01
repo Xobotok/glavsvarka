@@ -1,21 +1,20 @@
-
-
-<div class="service_item">
-    <div class="service_item_inner">
-        <div class="service_icon">
-            <img src="<?= $category['icon'] ?>.png" alt="">
-            <img src="<?= $category['icon'] ?>_w.png" alt="">
-        </div>
-        <a href="<?= \yii\helpers\Url::to(['category/'.$category['id']]) ?>">
-            <h4><?= $category['name'] ?></h4>
+<?use yii\helpers\Url;?>
+<div class="category__item col-lg-4 col-md-6 col-sm-12">
+    <div class="category__item_block">
+        <a href="<?= Url::to(['category/show', 'id' => $category['id']]) ?>">
+    <img class = 'category__item_image' src="/img/category/<?= $category['id'] ?>/4x5.png" alt="">
         </a>
-        <?foreach ($category['childs'] as $child) {
-            echo "<a href = ".\yii\helpers\Url::to(['category/'.$child['id']])."> 
-    <p>$child[name]</p>
-</a>";
-        }?>
-        <h4><?= $category['childs'][7]['name'] ?></h4>
-        <a class="view_btn" href="<?= \yii\helpers\Url::to(['category/'.$category['id']]) ?>">Перейти в
-            каталог</a>
+            <div class="category__item_title">
+        <a href="<?= Url::to(['category/show', 'id' => $category['id']]) ?>">
+            <h3><?=$category['name']?></h3>
+        </a>
     </div>
+    <div class="subcategory__title">
+        <? foreach ($category['childs'] as $key => $item) {?>
+            <a href="<?= Url::to(['category/show', 'id' => $key]) ?>">
+                <h5><?=$item['name']?></h5>
+            </a>
+        <?}?>
+    </div>
+</div>
 </div>

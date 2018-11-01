@@ -4139,3 +4139,112 @@ transform: rotate(45deg);
   text-align: center;
   margin-top: 10px;
 }
+.category__section {
+  padding-top: 40px;
+}
+.category__section h6 {
+  padding-bottom: 40px;
+}
+.category__item_image {
+  width: 300px;
+  height: 250px;
+}
+.category__block {
+  text-align: center;
+}
+
+.container_padding {
+  padding-left: 12%;
+  padding-right: 12%;
+}
+.category__item {
+  height: 460px;
+}
+.category__item_block {
+  padding-top: 10px;
+  background-color: #e5e5e5;
+  height: 440px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.category__item_block:hover {
+  box-shadow: 3px 3px 7px 3px rgba(0, 0, 0, .65);
+}
+.category__item_block img {
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  background-color: white;
+}
+.category__item_block img:hover {
+  box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, .65);
+}
+.subcategory__title h5 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+  color: #535760;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 20px;
+  margin-right: 20px;
+  padding-bottom: 3px;
+}
+.subcategory__title h5:hover {
+  color: #888d96;
+  border-bottom: 1px solid #888d96;
+
+}
+.category__item_title {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.category__item_title h3 {
+  color: #31353d;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+  border-bottom: 1px solid #e5e5e5;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 6px;
+}
+
+.category__item_title h3:hover {
+  color: #ffcd00;
+  border-bottom: 1px solid #ffcd00;
+}
+
+.category__section_title {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+.breadcrumb {
+  margin-top: 200px;
+  margin-bottom: 0;
+}
+@media (min-width: 992px) {
+  .breadcrumb {
+    margin-top: 100px;
+    margin-bottom: 0;
+  }
+}
+.latest_news_item {
+  height: 550px;
+}
+.news_content h4 {
+  text-transform: uppercase;
+}

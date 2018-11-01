@@ -4,10 +4,10 @@
             <img src="<?= $category['icon'] ?>.png" alt="">
             <img src="<?= $category['icon'] ?>_w.png" alt="">
         </div>
-        <a href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">
+        <a href="<?= \yii\helpers\Url::to(['category/show', 'id' => $category['id']]) ?>">
             <h4><?= $category['name'] ?></h4>
         </a>
-        <a class="view_btn" href="<?= \yii\helpers\Url::to(['category/view', 'id' => $category['id']]) ?>">Перейти в
+        <a class="view_btn" href="<?= \yii\helpers\Url::to(['category/show', 'id' => $category['id']]) ?>">Перейти в
             каталог</a>
     </div>
 </div>
