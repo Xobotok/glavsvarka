@@ -10,9 +10,12 @@ use yii\bootstrap\NavBar;
 use yii\widgets\ActiveForm;
 use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
+use app\models\forms\SearchForm;
 
 AppAsset::register($this);
 LtAppAsset::register($this);
+
+$searchModel = new SearchForm();
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -41,9 +44,6 @@ LtAppAsset::register($this);
                 </div>
             </div>
             <nav class="navbar navbar-default">
-                <div class="search" id = 'form_search'>
-
-                </div>
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -57,6 +57,12 @@ LtAppAsset::register($this);
 
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <div class="search" id = 'form_search'>
+                        <form action="<?=\yii\helpers\Url::to(['product/search'])?>" method="get" class="search-form" role="search">
+                            <input id="search-field" name="q" type="text" placeholder="Поиск товара" class="hint" autocomplete="off" />
+                            <button id="search-submit" type="submit">Поиск</button>
+                        </form>
+                    </div>
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown submenu">
                             <a href="/">Главная</a>
@@ -69,7 +75,7 @@ LtAppAsset::register($this);
                         </li>
                         <li><a href="/about/">О компании</a></li>
                         <li><a href="/contact/">Контакты</a></li>
-                        <li class="icon_search"><a href="#"><i class="mdi mdi-cart"></i></a></li>
+                        <li class="icon_search"><a href="/cart/index"><i class="mdi mdi-cart"></i></a></li>
                     </ul>
                 </div><!-- /.navbar-collapse -->
             </nav>
@@ -84,8 +90,11 @@ LtAppAsset::register($this);
             <div class="row footer_widgets_inner">
                 <div class="col-md-3 col-sm-6">
                     <aside class="f_widget about_widget">
-                        <img src="img/footer-logo.png" alt="">
-                        <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan-tium doloremque laudantium. ed quia consequuntur magni dolores eos qui ratione.</p>
+                        <img src="/img/logo.png" alt="">
+                        <p>Главсварка реализует весь спектр товаров для сварочных, укладочных и других видов работ.
+                            <br>
+                            <br>Мы работаем напрямую от производителей, что позволяет нам гарантировать качество
+                            и быструю доставку в любую точку страны.</p>
                         <ul>
                             <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -94,71 +103,21 @@ LtAppAsset::register($this);
                         </ul>
                     </aside>
                 </div>
-                <div class="col-md-3 col-sm-6">
-                    <aside class="f_widget recent_widget">
-                        <div class="f_w_title">
-                            <h3>Recent Posts</h3>
-                        </div>
-                        <div class="recent_w_inner">
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="img/blog/recent-post/recent-1.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><p>The road to success is always under con-struction</p></a>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <img src="img/blog/recent-post/recent-2.png" alt="">
-                                </div>
-                                <div class="media-body">
-                                    <a href="#"><p>The road to success is always under con-struction</p></a>
-                                </div>
-                            </div>
-                        </div>
+                <div class="col-md-6 col-sm-6">
+                    <aside class="f_widget give_us_widget yandex_map">
+                    <h5>Как нас найти?</h5>
                     </aside>
-                </div>
-                <div class="col-md-3 col-sm-6">
-                    <aside class="f_widget address_widget">
-                        <div class="f_w_title">
-                            <h3>Office Address</h3>
-                        </div>
-                        <div class="address_w_inner">
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-map-marker"></i>
-                                </div>
-                                <div class="media-body">
-                                    <p>1234 Cafficic, California, USA</p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-phone"></i>
-                                </div>
-                                <div class="media-body">
-                                    <p>(012) 3456789 </p>
-                                    <p>(012) 3456789 </p>
-                                </div>
-                            </div>
-                            <div class="media">
-                                <div class="media-left">
-                                    <i class="fa fa-envelope"></i>
-                                </div>
-                                <div class="media-body">
-                                    <p>info@domain.com</p>
-                                </div>
-                            </div>
-                        </div>
-                    </aside>
-                </div>
+                    <div class="yandex_map2">
+                        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A48247edbe6dca03eb6d617b0ad11646f70ab1009382afcc8fb9bf9163673574f&amp;width=354&amp;height=253&amp;lang=ru_RU&amp;scroll=true"></script>
+
+                    </div>
+                   </div>
                 <div class="col-md-3 col-sm-6">
                     <aside class="f_widget give_us_widget">
-                        <h5>Give Us A Call</h5>
-                        <h4>(012) 3456789</h4>
-                        <h5>or</h5>
-                        <a class="get_bg_btn" href="#">GET A QUOTE</a>
+                        <h5>Позвоните нам</h5>
+                        <h4>+7(347)246-55-99</h4>
+                        <h5>или</h5>
+                        <a class="get_bg_btn" href="#">Напишите</a>
                     </aside>
                 </div>
             </div>

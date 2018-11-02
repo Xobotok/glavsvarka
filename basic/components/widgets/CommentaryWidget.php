@@ -10,6 +10,7 @@ namespace app\components\widgets;
 
 
 use app\models\CommentProduct;
+use app\models\Users;
 use yii\base\Widget;
 
 class CommentaryWidget extends Widget {
@@ -27,8 +28,10 @@ class CommentaryWidget extends Widget {
     }
 
     public function run() {
-        $this->data = CommentProduct::find()->indexBy('id')->asArray()->where(['status_id' => 5])->all();
-        $this->commentHtml = $this->getCommentHtml($this->data);
+        if($this->tpl === 'owl_carusel_items.php') {
+            $this->data = CommentProduct::find()->indexBy('id')->asArray()->joinWith(Users::tableName())->where(['status_id' => 5])->all();
+            $this->commentHtml = $this->getCommentHtml($this->data);
+        }
         return $this->commentHtml;
     }
     protected function commentToTemplate($commentary) {

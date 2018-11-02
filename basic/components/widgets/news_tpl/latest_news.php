@@ -16,7 +16,7 @@
 
             </div>
             <div class="pull-right">
-                <a href="<?=Yii::$app->urlManager->createUrl(['users/show/', 'id' => $news['users']['id']])?>">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                <a href="<?=Yii::$app->urlManager->createUrl(['news/show/', 'id' => $news['id']])?>">Подробнее <i class="fa fa-angle-right" aria-hidden="true"></i></a>
             </div>
         </div>
     </div>

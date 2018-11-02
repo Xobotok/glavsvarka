@@ -5,6 +5,7 @@ namespace app\controllers;
 use Yii;
 use app\models\Product;
 use app\models\search\ProductSearch;
+use yii\data\Pagination;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -123,5 +124,21 @@ class ProductController extends Controller
         }
 
         throw new NotFoundHttpException('The requested page does not exist.');
+    }
+    public function actionSearch() {
+        $q = trim(Yii::$app->request->get('q'));
+        if(!$q) return $this->render('search');
+        $query = Product::find()->where(['like', 'name', $q])->orWhere(['like', 'model', $q]);
+        $pages = new Pagination([
+            'totalCount' => $query->count(),
+            'pageSize' => 10,
+            'forcePageParam' => false,
+            'pageSizeParam' => false
+        ]);
+        $products = $query->orderBy('id DESC')
+            ->offset($pages->offset)
+            ->limit($pages->limit)
+            ->all();
+        return $this->render('search', compact('products','pages','q'));
     }
 }
